@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-si-LwG">
+                                <rect key="frame" x="10" y="54" width="408" height="508"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m53-E8-Luz">
+                                <rect key="frame" x="221" y="572" width="179" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m53-E8-Luz" secondAttribute="height" multiplier="179:150" id="b3F-uy-YxF"/>
+                                </constraints>
+                                <state key="normal" image="btn_minus"/>
+                                <connections>
+                                    <action selector="minusPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iQR-AR-reZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsO-nv-OKr">
+                                <rect key="frame" x="10" y="737" width="398" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="height" multiplier="398:165" id="LrS-GT-bhe"/>
+                                    <constraint firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="height" multiplier="398:165" id="NOU-YB-s7Y"/>
+                                    <constraint firstAttribute="width" constant="354" id="RXR-JH-yM9"/>
+                                    <constraint firstAttribute="height" constant="130" id="myB-Px-BYK"/>
+                                </constraints>
+                                <state key="normal" image="btn_reset"/>
+                                <connections>
+                                    <action selector="resetPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f61-yU-7gr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-L4-IQ0">
+                                <rect key="frame" x="32" y="572" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hbU-L4-IQ0" secondAttribute="height" multiplier="1:1" id="TaM-Bn-Mjp"/>
+                                </constraints>
+                                <state key="normal" image="btn_plus"/>
+                                <connections>
+                                    <action selector="plusPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDW-EG-Jy7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="trailing" secondItem="m53-E8-Luz" secondAttribute="trailing" id="0ac-Rc-RlM"/>
+                            <constraint firstItem="hbU-L4-IQ0" firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="width" multiplier="0.376884" constant="45" id="3RF-EY-dxv"/>
+                            <constraint firstItem="m53-E8-Luz" firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="width" multiplier="0.449749" id="9MF-QF-Sr8"/>
+                            <constraint firstItem="vqg-si-LwG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Epd-zA-e3F"/>
+                            <constraint firstItem="hbU-L4-IQ0" firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="width" multiplier="0.376884" id="FuR-E6-9vD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jsO-nv-OKr" secondAttribute="bottom" constant="25" id="LSq-op-JL2"/>
+                            <constraint firstItem="vqg-si-LwG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Mwl-ok-Z8f"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="leading" secondItem="hbU-L4-IQ0" secondAttribute="leading" constant="45" id="PJf-hf-SLE"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="top" secondItem="hbU-L4-IQ0" secondAttribute="bottom" constant="15" id="SzE-a1-ZS2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jsO-nv-OKr" secondAttribute="trailing" constant="15" id="TYf-n4-cWy"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="trailing" secondItem="m53-E8-Luz" secondAttribute="trailing" id="ZzM-GY-pUM"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="leading" secondItem="hbU-L4-IQ0" secondAttribute="leading" id="cDW-n2-cNb"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ceU-Y3-W3p"/>
+                            <constraint firstItem="vqg-si-LwG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dYg-hP-8kr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jsO-nv-OKr" secondAttribute="bottom" constant="25" id="dma-un-iTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jsO-nv-OKr" secondAttribute="trailing" constant="15" id="ffU-3Y-jj0"/>
+                            <constraint firstItem="hbU-L4-IQ0" firstAttribute="width" secondItem="jsO-nv-OKr" secondAttribute="width" multiplier="0.376884" id="iQa-I9-l4J"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="top" secondItem="m53-E8-Luz" secondAttribute="bottom" constant="15" id="idg-e6-aZS"/>
+                            <constraint firstItem="jsO-nv-OKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="l9Q-DZ-bIQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vqg-si-LwG" secondAttribute="trailing" constant="10" id="oNn-yG-KdP"/>
+                            <constraint firstItem="m53-E8-Luz" firstAttribute="top" secondItem="vqg-si-LwG" secondAttribute="bottom" constant="10" id="zJg-SI-CwJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="vqg-si-LwG" id="DeZ-jH-srw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_minus" width="150" height="150"/>
+        <image name="btn_plus" width="150" height="150"/>
+        <image name="btn_reset" width="354" height="130"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
